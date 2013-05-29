@@ -63,6 +63,14 @@
             </plugin>
 
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+
+                <filtering>true</filtering>
+            </resource>
+
+        </resources>
     </build>
 
     <dependencies>
@@ -101,10 +109,10 @@
                 <logger.level>DEBUG</logger.level>
                 <logger.file.path>c:/tmp/isincloud-web-app.log</logger.file.path>
                 <logger.file.max.size>1MB</logger.file.max.size>
-                <logger.file.layout.pattern>Example WS SOAP  - %d %5p %c{1}:%L %n %m%n%n</logger.file.layout.pattern>
-                <logger.console.layout.pattern>Example WS SOAP - %d %5p %c{1}:%L %n %m%n%n
+                <logger.file.layout.pattern>Example WS ClientSOAP  - %d %5p %c{1}:%L %n %m%n%n</logger.file.layout.pattern>
+                <logger.console.layout.pattern>Example WS Client SOAP - %d %5p %c{1}:%L %n %m%n%n
                 </logger.console.layout.pattern>
-                <endpoint>http://localhost:8080/>example-cxf-ws/ws/v/1/teamService?wsdl</endpoint>
+                <endpoint>http://localhost:8080/example-cxf-ws/ws/v/1/teamService?wsdl</endpoint>
             </properties>
         </profile>
     </profiles>

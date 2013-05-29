@@ -2,23 +2,24 @@ package org.emaginalabs.demo.jaxws.cxf.client.spring;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.emaginalabs.demo.jaxws.cxf.model.Player;
 import org.emaginalabs.demo.jaxws.cxf.ws.ITeamService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 
-public class Main
-{
-    public static final Logger logger = Logger.getLogger(Main.class);
+public class Main {
+
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
 
 
     public static void main(String[] args) throws Exception
     {
         //Initializes Spring Container
         ClassPathXmlApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("/spring/applicationContext.xml");
         ITeamService teamServiceClient = (ITeamService) applicationContext.getBean("teamServiceClient");
 
         //test
@@ -30,7 +31,7 @@ public class Main
         }
 
         logger.info("\n updatePlayerByNumber");
-        teamServiceClient.updatePlayerByNumber(1, new Player(1,"Anders Lindegaard", 28));
+        teamServiceClient.updatePlayerByNumber(1, new Player(1, "Anders Lindegaard", 28));
 
         logger.info("\n deletePlayer");
         teamServiceClient.deletePlayer(6);
