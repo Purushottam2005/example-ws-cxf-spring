@@ -2,10 +2,9 @@ package org.emaginalabs.demo.jaxws.cxf.ws;
 
 import org.emaginalabs.demo.jaxws.cxf.model.Player;
 
-import java.util.List;
-
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.util.List;
 
 
 @WebService

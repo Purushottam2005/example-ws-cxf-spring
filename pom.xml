@@ -30,6 +30,7 @@
     <modules>
         <module>wsserver</module>
         <module>wsclient</module>
+        <module>wsshare</module>
     </modules>
 
     <dependencies>

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 
 
-@Service(value="teamService")
+@Service(value = "teamService")
 public class TeamServiceImpl implements ITeamService {
 
     private Logger logger = LoggerFactory.getLogger(TeamServiceImpl.class);
@@ -105,11 +105,6 @@ public class TeamServiceImpl implements ITeamService {
             return result;
         }
 
-        @Override
-        public void foo()
-        {
-            logger.info("Hello world!!!");
-        }
 
         private Player findById(int number)
         {
